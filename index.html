@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="w-5/6 mx-auto">
+        <p class="text-center text-2xl sm:text-4xl bg-slate-400 py-4 text-white uppercase">Income and Saving</p>
+        <div class="my-5 sm:grid grid-cols-2 gap-x-10 ">
+            <div class="bg-green-400 p-4">
+                <img src="moneyTree.png" alt="">
+            </div>
+            <div class="text-center bg-sky-400 p-4 text-white">
+                <p class="uppercase text-2xl sm:text-3xl">income</p>
+                <div class="sm:flex justify-between mt-3">
+                    <p class="sm:text-2xl">Income : </p>
+                    <input  id="income" placeholder="tk." type="text" class="focus:ring-4 focus:ring-white px-3 sm:px-4 text-black text-base rounded-xl p-1 w-4/6">
+                </div>
+
+                <p class="uppercase text-2xl sm:text-3xl mt-4 sm:mt-7">Expenses</p>
+                <div class="sm:flex justify-between mt-3 sm:mt-4">
+                    <p class="sm:text-2xl">Cost of food : </p>
+                    <input  id="food" placeholder="tk." type="text" class="focus:ring-4 focus:ring-white px-3 sm:px-4 text-black text-base rounded-xl p-1 w-4/6" >
+                </div>
+                <div class="sm:flex justify-between mt-3 sm:mt-4">
+                    <p class="sm:text-2xl">Rent : </p>
+                    <input  id="rent" placeholder="tk." type="text" class="focus:ring-4 focus:ring-white px-3 sm:px-4 text-black text-base rounded-xl p-1 w-4/6" >
+                </div>
+                <div class="sm:flex justify-between mt-3 sm:mt-4">
+                    <p class="sm:text-2xl">Others : </p>
+                    <input  id="others" placeholder="tk." type="text" class="focus:ring-4 focus:ring-white px-3 sm:px-4 text-black text-base rounded-xl p-1 w-4/6" >
+                </div>
+                <button onclick="cost()" id="total-cost" type="button" class="m-3 sm:m-5 text-white bg-green-900 hover:bg-green-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  focus:outline-none dark:focus:ring-blue-800">Calculate</button>
+                <p class="text-1xl sm:text-2xl ">Total Cost : tk. <span id="expenses">0.0</span></p>
+                <p class="text-1xl sm:text-2xl m-2 sm:m-4">Balance : tk. <span id="balance">0.0</span></p>
+                <div class="sm:flex justify-between mt-3 sm:mt-4">
+                    <p class="sm:text-2xl">Save : </p>
+                    <input id="save" placeholder="?%" type="text" class="focus:ring-4 focus:ring-white px-3 sm:px-4 text-black text-base rounded-xl p-1 w-2/6 h-9 text-center" > <p>%</p>
+                    <button onclick="savee()" id="saving" type="button" class="text-white bg-green-900 hover:bg-green-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2  focus:outline-none dark:focus:ring-blue-800">Calculate</button>
+                </div>
+                <p class="text-1xl sm:text-2xl mt-3 sm:mt-5">Saving Amount : tk. <span id="saving-amount">0.0</span></p>
+                <p class="text-1xl sm:text-2xl m-1 sm:m-2">Remaining Balance : tk. <span id="remaining-balance">0.0</span></p>
+
+            </div>
+        </div> 
+
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>
