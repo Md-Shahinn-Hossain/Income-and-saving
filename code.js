@@ -26,6 +26,7 @@ function cost(){
 }
 function savee(){
     if(parseFloat(save.value) > 100){alert('What the hack!! you can not save more than 100% :[');save.value = '';}
+    else if(parseFloat(save.value) < 0){alert('Murkho!!🙄');save.value = '';}
     else{
         savingAmount.innerText = parseFloat(balance.innerText) * parseFloat(save.value) / 100;
     remainingBalance.innerText = parseFloat(balance.innerText) - parseFloat(savingAmount.innerText);
